@@ -59,4 +59,4 @@ console.log(list.contains('a')); //true
 console.log(list.contains('b')); //true
 console.log(list.contains('c')); //true
 console.log(list.contains('d')); //true
-console.log(list.contains('e')); //false
+console.log(list.contains('e'));
