@@ -30,7 +30,17 @@ def addToInventory(inventory, addedItems):
     return inventory
 
 
+def addToInventory2(inventory, addedItems):
+    for i in range(len(addedItems)):
+        for key, val in inventory.items():
+            if key == addedItems[i]:
+                val += 1
+            else:
+                inventory.setdefault(addedItems[i], 1)
+    return inventory
+
+
 inv = {'gold coin': 42, 'rope': 1}
 dragonLoot = ['gold coin', 'dagger', 'gold coin', 'gold coin', 'ruby']
-inv = addToInventory(inv, dragonLoot)
+inv = addToInventory2(inv, dragonLoot)
 displayInventory(inv)
