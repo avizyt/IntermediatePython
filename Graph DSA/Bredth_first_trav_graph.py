@@ -13,7 +13,7 @@ class Graph:
     def addEdge(self, u, v):
         self.graph[u].append(v)
 
-    # function to print a BFS pf graph
+    # function to print a BFS of graph
     def BFS(self, s):
         visited = [False] * (max(self.graph) + 1)
         
@@ -34,3 +34,16 @@ class Graph:
                 if visited[i] == False:
                     queue.append(i)
                     visited[i] = True
+
+
+if __name__ == '__main__':
+    g = Graph()
+    g.addEdge(0, 1)
+    g.addEdge(0, 2)
+    g.addEdge(1, 2)
+    g.addEdge(2, 0)
+    g.addEdge(2, 3)
+    g.addEdge(3, 3)
+
+    print("Following is Breadth First Traversal")
+    g.BFS(2)
